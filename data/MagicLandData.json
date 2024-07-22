@@ -1,0 +1,59 @@
+﻿[
+  {
+    "CategoryName": "Rides",
+    "Destinations": [
+      {
+        "Name": "Thunder Mountain",
+        "Type": "Roller Coaster",
+        "Location": "Adventure Land",
+        "Duration": "90 minutes",
+        "Description": "A thrilling roller coaster ride through a haunted mountain."
+      },
+      {
+        "Name": "Pirate Ship",
+        "Type": "Swing Ride",
+        "Location": "Adventure Land",
+        "Duration": "45 minutes",
+        "Description": "Swing back and forth on a giant pirate ship."
+      }
+    ]
+  },
+  {
+    "CategoryName": "Shows",
+    "Destinations": [
+      {
+        "Name": "Magic Show",
+        "Type": "Live Performance",
+        "Location": "Fantasy Land",
+        "Duration": "60 minutes",
+        "Description": "A magical performance with wizards and sorcery."
+      },
+      {
+        "Name": "Parade",
+        "Type": "Street Performance",
+        "Location": "Main Street",
+        "Duration": "30 minutes",
+        "Description": "A colorful parade with dancers and floats."
+      }
+    ]
+  },
+  {
+    "CategoryName": "Dining",
+    "Destinations": [
+      {
+        "Name": "Dragon's Feast",
+        "Type": "Restaurant",
+        "Location": "Dragon Land",
+        "Duration": "120 minutes",
+        "Description": "A grand feast with dragon-themed dishes."
+      },
+      {
+        "Name": "Elf's Bakery",
+        "Type": "Bakery",
+        "Location": "Fantasy Land",
+        "Duration": "30 minutes",
+        "Description": "Delicious baked goods and pastries."
+      }
+    ]
+  }
+]
