@@ -6,18 +6,17 @@ namespace MagicLandExplorer.Tasks
 {
     public class SortByName
     {
-        // Sort destinations alphabetically by their name
-        public static void ShowSortedByName(List<Category> filedata)
+        public static void ShowSortedByName(List<Category> categories)
         {
-            var result = from data in filedata
-                         from destination in data.Destinations
-                         orderby destination.Name
-                         select destination.Name;
+            var sortedDestinations = from category in categories
+                                     from destination in category.Destinations
+                                     orderby destination.Name
+                                     select destination;
 
-            Console.WriteLine("\n3. Destinations sorted alphabetically by name:");
-            foreach (var name in result)
+            Console.WriteLine("\nDestinations Sorted by Name:");
+            foreach (var destination in sortedDestinations)
             {
-                Console.WriteLine(name);
+                Console.WriteLine($"- {destination.Name}");
             }
         }
     }

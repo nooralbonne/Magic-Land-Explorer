@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using MagicLandExplorer.Tasks;
-using MagicLandExplorer.Tasks.MagicLandExplorer.Tasks;
 
 namespace MagicLandExplorer
 {
@@ -11,8 +10,18 @@ namespace MagicLandExplorer
     {
         static void Main(string[] args)
         {
+            // Define the path to the JSON file
+            string jsonFilePath = @"C:\Users\Student\Desktop\MagicLandExplorer\MagicLandExplorer\data\MagicLandData.json";
+
+            // Ensure the file exists before attempting to read it
+            if (!File.Exists(jsonFilePath))
+            {
+                Console.WriteLine($"Error: Could not find the JSON file at path: {jsonFilePath}");
+                return;
+            }
+
             // Load JSON data
-            string json = File.ReadAllText("C:\\Users\\Student\\Desktop\\MagicLandExplorer\\MagicLandExplorer\\data\\MagicLandData.json");
+            string json = File.ReadAllText(jsonFilePath);
             List<Category> categories = JsonConvert.DeserializeObject<List<Category>>(json);
 
             while (true)
@@ -33,13 +42,13 @@ namespace MagicLandExplorer
                         FilterDestinations.ShowFilteredDestinations(categories);
                         break;
                     case "2":
-                        LongestDuration.ShowLongestDuration(categories);
+                        LongestDuration.filterlongestDestinations(categories);
                         break;
                     case "3":
                         SortByName.ShowSortedByName(categories);
                         break;
                     case "4":
-                        Top3Duration.ShowTop3Duration(categories);
+                        Top3Duration.filterTop3Destinations(categories);
                         break;
                     case "5":
                         return;
